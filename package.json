@@ -1,0 +1,43 @@
+{
+  "name": "pi-copy-all",
+  "version": "0.1.0",
+  "description": "Copy the current Pi conversation branch to the clipboard.",
+  "type": "module",
+  "license": "MIT",
+  "author": "jon-devlapaz",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jon-devlapaz/pi-copy-all.git"
+  },
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "keywords": [
+    "pi-package",
+    "pi-extension"
+  ],
+  "files": [
+    "index.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ]
+  },
+  "scripts": {
+    "check": "tsc --noEmit",
+    "test": "node --test --experimental-strip-types --experimental-test-module-mocks *.test.mjs",
+    "format:check": "prettier --check \"*.ts\" \"src/**/*.ts\" \"*.mjs\" \"*.json\" \"*.md\" --no-error-on-unmatched-pattern"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "1.4.0",
+    "@types/node": "26.6.2",
+    "prettier": "3.9.8",
+    "typescript": "7.0.2"
+  }
+}
